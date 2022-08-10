@@ -19,8 +19,8 @@ export const meta: MetaFunction = () => ({
 export const loader: LoaderFunction = async ({ context }) => {
   return json({
     ENV: {
-      HELLO: process.env.HELLO,
-      WORLD: process.env.WORLD,
+      HELLO: context.HELLO,
+      WORLD: context.WORLD,
     },
   }); 
 };
